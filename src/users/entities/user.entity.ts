@@ -1,7 +1,7 @@
-import { BaseEntity } from '../../../src/common/entities/base.entity';
 import { Entity, Column, BeforeInsert } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { Exclude } from 'class-transformer';
+import { BaseEntity } from 'src/common/entities/base.entity';
 
 @Entity('users')
 export class UserEntity extends BaseEntity {
