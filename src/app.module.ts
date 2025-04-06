@@ -26,6 +26,9 @@ import { validationSchema } from './config/env.validation';
         password: configService.get('database.password'),
         database: configService.get('database.name'),
         autoLoadEntities: true,
+        ssl: configService.get<boolean>('database.SSL')
+          ? { rejectUnauthorized: false }
+          : false,
         synchronize: true, // Disable in production
       }),
     }),

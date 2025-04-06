@@ -6,4 +6,5 @@ export default registerAs('database', () => ({
   username: process.env.DB_USERNAME || 'postgres',
   password: process.env.DB_PASSWORD || 'password',
   name: process.env.DB_NAME || 'mydatabase',
+  SSL: process.env.DB_SSL === 'true' || false,
 }));
